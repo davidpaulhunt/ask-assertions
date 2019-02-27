@@ -1,0 +1,40 @@
+{
+  "name": "ask-assertions",
+  "version": "1.0.0",
+  "description": "A set of helpers to test ask projects.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "rm -rf dist/* && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidpaulhunt/ask-assertions.git"
+  },
+  "keywords": [
+    "Alexa",
+    "ASK",
+    "assert",
+    "assertions",
+    "test"
+  ],
+  "author": "David Hunt <davidpaulhunt@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/davidpaulhunt/ask-assertions/issues"
+  },
+  "homepage": "https://github.com/davidpaulhunt/ask-assertions#readme",
+  "peerDependencies": {
+    "ask-sdk-model": "^1.11.2",
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/node": "^11.9.5",
+    "ask-sdk-model": "^1.11.2",
+    "chai": "^4.2.0",
+    "prettier": "^1.16.4",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333"
+  }
+}

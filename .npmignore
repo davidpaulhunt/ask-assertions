@@ -1,0 +1,12 @@
+.prettierignore
+.prettierrc
+coverage/
+doc/
+src/
+node_modules/
+tst/
+gulpfile.js
+gulpfile-base.js
+package-lock.json
+tsconfig.json
+tslint.json

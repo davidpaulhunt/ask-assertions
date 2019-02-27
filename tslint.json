@@ -1,0 +1,33 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "indent": {
+      "severity": "warning",
+      "options": ["spaces", 2]
+    },
+    "interface-name": false,
+    "max-line-length": {
+      "options": {
+        "limit": 120,
+        "ignore-pattern": "('|\").*$"
+      }
+    },
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "only-arrow-functions": {
+      "options": ["allow-declarations", "allow-named-functions"]
+    }
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [120]
+    }
+  }
+}
