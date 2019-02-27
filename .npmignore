@@ -4,7 +4,7 @@ coverage/
 doc/
 src/
 node_modules/
-tst/
+test/
 gulpfile.js
 gulpfile-base.js
 package-lock.json

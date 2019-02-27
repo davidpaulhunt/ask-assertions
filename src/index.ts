@@ -2,8 +2,7 @@ import { interfaces, ResponseEnvelope, ui } from "ask-sdk-model";
 import { expect } from "chai";
 
 export function checkResponseStructure(response: ResponseEnvelope): void {
-  expect(response).to.have.property("version");
-  expect(response.version).to.be.equal("1.0");
+  expect(response).to.have.property("version", "1.0");
   expect(response).to.have.property("response");
 }
 
