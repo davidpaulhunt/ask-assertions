@@ -47,11 +47,11 @@ describe("AMAZON.HelpIntent", function testHelpIntent() {
   });
 
   it("should return valid output speeach", () => {
-    assertions.checkOutputSpeach(skillResponse);
+    assertions.checkOutputSpeech(skillResponse);
   });
 
   it("should say 'This skill can do cool things'", () => {
-    assertions.checkOutputSpeachContains(skillResponse, "This skill can do cool things");
+    assertions.checkOutputSpeechContains(skillResponse, "This skill can do cool things");
   });
 });
 ```

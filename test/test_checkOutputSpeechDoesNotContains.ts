@@ -2,11 +2,11 @@ import "mocha";
 import { ResponseEnvelope } from "ask-sdk-model";
 import { expect } from "chai";
 
-import { checkOutputSpeachDoesNotContains } from "../src";
+import { checkOutputSpeechDoesNotContains } from "../src";
 
-describe("checkOutputSpeachDoesNotContains", () => {
+describe("checkOutputSpeechDoesNotContains", () => {
   it("should be a function", () => {
-    expect(checkOutputSpeachDoesNotContains).to.be.an.instanceOf(Function);
+    expect(checkOutputSpeechDoesNotContains).to.be.an.instanceOf(Function);
   });
 
   it("should fail when response is missing", () => {
@@ -15,7 +15,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -28,7 +28,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -43,7 +43,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -60,7 +60,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -77,7 +77,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -95,7 +95,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -113,7 +113,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -131,7 +131,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -149,7 +149,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -167,7 +167,7 @@ describe("checkOutputSpeachDoesNotContains", () => {
     };
     let err;
     try {
-      checkOutputSpeachDoesNotContains(skillResponse as ResponseEnvelope, "foo");
+      checkOutputSpeechDoesNotContains(skillResponse as ResponseEnvelope, "foo");
     } catch (e) {
       err = e;
     }

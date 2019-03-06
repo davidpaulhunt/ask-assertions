@@ -2,11 +2,11 @@ import "mocha";
 import { ResponseEnvelope } from "ask-sdk-model";
 import { expect } from "chai";
 
-import { checkOutputSpeach } from "../src";
+import { checkOutputSpeech } from "../src";
 
-describe("checkOutputSpeach", () => {
+describe("checkOutputSpeech", () => {
   it("should be a function", () => {
-    expect(checkOutputSpeach).to.be.an.instanceOf(Function);
+    expect(checkOutputSpeech).to.be.an.instanceOf(Function);
   });
 
   it("should fail when response is missing", () => {
@@ -15,7 +15,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -28,7 +28,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -43,7 +43,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -60,7 +60,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -77,7 +77,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -95,7 +95,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -113,7 +113,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }
@@ -131,7 +131,7 @@ describe("checkOutputSpeach", () => {
     };
     let err;
     try {
-      checkOutputSpeach(skillResponse as ResponseEnvelope);
+      checkOutputSpeech(skillResponse as ResponseEnvelope);
     } catch (e) {
       err = e;
     }

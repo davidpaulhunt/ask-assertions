@@ -6,7 +6,7 @@ export function checkResponseStructure(response: ResponseEnvelope): void {
   expect(response).to.have.property("response");
 }
 
-export function checkOutputSpeach(response: ResponseEnvelope): void {
+export function checkOutputSpeech(response: ResponseEnvelope): void {
   expect(response).to.have.property("response");
   const r = response.response;
 
@@ -21,14 +21,14 @@ export function checkOutputSpeach(response: ResponseEnvelope): void {
   expect(os.ssml).to.match(/<\/speak>$/); // .endWith('</speak>');
 }
 
-export function checkNoOutputSpeach(response: ResponseEnvelope): void {
+export function checkNoOutputSpeech(response: ResponseEnvelope): void {
   expect(response).to.have.property("response");
   const r = response.response;
 
   expect(r).to.not.have.property("outputSpeech");
 }
 
-export function checkOutputSpeachContains(response: ResponseEnvelope, text: string): void {
+export function checkOutputSpeechContains(response: ResponseEnvelope, text: string): void {
   expect(response).to.have.property("response");
   const r = response.response;
 
@@ -43,7 +43,7 @@ export function checkOutputSpeachContains(response: ResponseEnvelope, text: stri
   expect(os.ssml).to.match(/<\/speak>$/); // .endWith('</speak>');
 }
 
-export function checkOutputSpeachContainsAtLeastOneOf(
+export function checkOutputSpeechContainsAtLeastOneOf(
   response: ResponseEnvelope,
   ...validText: string[]
 ): void {
@@ -62,7 +62,7 @@ export function checkOutputSpeachContainsAtLeastOneOf(
   expect(os.ssml).to.match(/<\/speak>$/); // .endWith('</speak>');
 }
 
-export function checkOutputSpeachDoesNotContains(response: ResponseEnvelope, text: string): void {
+export function checkOutputSpeechDoesNotContains(response: ResponseEnvelope, text: string): void {
   expect(response).to.have.property("response");
   const r = response.response;
 

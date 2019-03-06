@@ -2,11 +2,11 @@ import "mocha";
 import { ResponseEnvelope } from "ask-sdk-model";
 import { expect } from "chai";
 
-import { checkOutputSpeachContainsAtLeastOneOf } from "../src";
+import { checkOutputSpeechContains } from "../src";
 
-describe("checkOutputSpeachContainsAtLeastOneOf", () => {
+describe("checkOutputSpeechContains", () => {
   it("should be a function", () => {
-    expect(checkOutputSpeachContainsAtLeastOneOf).to.be.an.instanceOf(Function);
+    expect(checkOutputSpeechContains).to.be.an.instanceOf(Function);
   });
 
   it("should fail when response is missing", () => {
@@ -15,7 +15,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -28,7 +28,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -43,7 +43,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -60,7 +60,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -77,7 +77,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -95,7 +95,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
@@ -113,14 +113,14 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
     expect(err).to.not.equal(undefined);
   });
 
-  it("should fail when response.outputSpeech.ssml does not contain blah or foo", () => {
+  it("should fail when response.outputSpeech.ssml does not contain blah", () => {
     const skillResponse = {
       response: {
         outputSpeech: {
@@ -131,14 +131,14 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah", "foo");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
     expect(err).to.not.equal(undefined);
   });
 
-  it("should succeed with valid output speech containing 'blah'", () => {
+  it("should succeed with valid output speech", () => {
     const skillResponse = {
       response: {
         outputSpeech: {
@@ -149,25 +149,7 @@ describe("checkOutputSpeachContainsAtLeastOneOf", () => {
     };
     let err;
     try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah", "foo");
-    } catch (e) {
-      err = e;
-    }
-    expect(err).to.equal(undefined);
-  });
-
-  it("should succeed with valid output speech containing 'foo'", () => {
-    const skillResponse = {
-      response: {
-        outputSpeech: {
-          ssml: "<speak> hi my name is foo </speak>",
-          type: "SSML",
-        },
-      },
-    };
-    let err;
-    try {
-      checkOutputSpeachContainsAtLeastOneOf(skillResponse as ResponseEnvelope, "blah", "foo");
+      checkOutputSpeechContains(skillResponse as ResponseEnvelope, "blah");
     } catch (e) {
       err = e;
     }
