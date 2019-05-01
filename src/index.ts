@@ -1,4 +1,4 @@
-import { interfaces, ResponseEnvelope, ui } from "ask-sdk-model";
+import { dialog, interfaces, ResponseEnvelope, ui } from "ask-sdk-model";
 import { expect } from "chai";
 
 export function checkResponseStructure(response: ResponseEnvelope): void {
@@ -204,4 +204,14 @@ export function checkNoDisplayDirective(response: ResponseEnvelope): void {
   const r = response.response;
   const displayDirective = r.directives && r.directives.find(d => d.type.startsWith("Display"));
   expect(displayDirective).to.equal(undefined);
+}
+
+export function checkSlotDirective(response: ResponseEnvelope, slot: string): void {
+  const r = response.response;
+  expect(r).to.have.property("directives");
+
+  const slotDirective = r.directives.find(
+    dir => dir.type === "Dialog.ElicitSlot" && dir.slotToElicit === slot
+  ) as dialog.ElicitSlotDirective;
+  expect(slotDirective).to.not.equal(undefined);
 }
